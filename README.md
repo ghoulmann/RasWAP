@@ -8,4 +8,6 @@ sudo /path/to/raspiwap.sh.
 
 ConfigureMe.sh should be kept in the same directory so the variables can be included.
 
+TO DO: backup files that are changed and be able to restore to undo the changes.
+
 
