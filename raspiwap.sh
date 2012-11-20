@@ -2,6 +2,7 @@
 
 #Check for Root
 ifaces=/etc/network/interfaces
+cp ifaces /etc/network/interfaces.bak
 LUID=$(id -u)
 if [[ $LUID -ne 0 ]]; then
 	echo "$0 must be run as root"
@@ -9,7 +10,7 @@ if [[ $LUID -ne 0 ]]; then
 fi
 
 if [ ! -f ./ConfigureMe.sh ]; then
-	echo "Confuration file not found."
+	echo "Configuration file not found."
 	exit 1
 fi
 
