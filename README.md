@@ -8,6 +8,6 @@ sudo /path/to/raspiwap.sh.
 
 ConfigureMe.sh should be kept in the same directory so the variables can be included.
 
-TO DO: backup files that are changed and be able to restore to undo the changes.
+Copies /etc/network/interfaces to /etc/network/interfaces.bk prior to changing things. To restore, rm /etc/network/interfaces and mv /etc/network/interfaces.bak /etc/network/interfaces
 
 
