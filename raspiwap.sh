@@ -71,7 +71,7 @@ echo "bridge_ports eth0 wlan0" >> /etc/network/interfaces
 echo "pre-up ifconfig eth0 0.0.0.0 up" >> /etc/network/interfaces
 echo "pre-up ifconfig wlan0 0.0.0.0 up" >> /etc/network/interfaces
 echo "pre-up brctl addbr br0" >> /etc/network/interfaces
-echo "pre-up brctl addif br0 eth0" >> /etc/network/intefaces
+echo "pre-up brctl addif br0 eth0" >> /etc/network/interfaces
 echo "post-down ifconfig wlan0 0.0.0.0 down" >> /etc/network/interfaces
 echo "post-down ifconfig eth0 0.0.0.0 down" >> /etc/network/interfaces
 echo "post-down brctl delif br0 eth0" >> /etc/network/interfaces
