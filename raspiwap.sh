@@ -75,7 +75,7 @@ echo "pre-up brctl addif br0 eth0" >> $ifaces
 echo "post-down ifconfig wlan0 0.0.0.0 down" >> $ifaces
 echo "post-down ifconfig eth0 0.0.0.0 down" >> $ifaces
 echo "post-down brctl delif br0 eth0" >> $ifaces
-echo "post-down brctl delbr br0" >> /etc/network/interfaces
+echo "post-down brctl delbr br0" >> $ifaces
 
 
 #configure services
