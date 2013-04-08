@@ -65,16 +65,16 @@ dhcp-range=10.0.0.2,10.0.0.5,255.255.255.0,12h
 EOF
 
 #configure bridge
-echo "auto br0" >> /etc/network/interfaces
-echo "iface br0 inet dhcp" >> /etc/network/interfaces
-echo "bridge_ports eth0 wlan0" >> /etc/network/interfaces
-echo "pre-up ifconfig eth0 0.0.0.0 up" >> /etc/network/interfaces
-echo "pre-up ifconfig wlan0 0.0.0.0 up" >> /etc/network/interfaces
-echo "pre-up brctl addbr br0" >> /etc/network/interfaces
-echo "pre-up brctl addif br0 eth0" >> /etc/network/interfaces
-echo "post-down ifconfig wlan0 0.0.0.0 down" >> /etc/network/interfaces
-echo "post-down ifconfig eth0 0.0.0.0 down" >> /etc/network/interfaces
-echo "post-down brctl delif br0 eth0" >> /etc/network/interfaces
+echo "auto br0" >> $ifaces
+echo "iface br0 inet dhcp" >> $ifaces
+echo "bridge_ports eth0 wlan0" >> $ifaces
+echo "pre-up ifconfig eth0 0.0.0.0 up" >> $ifaces
+echo "pre-up ifconfig wlan0 0.0.0.0 up" >> $ifaces
+echo "pre-up brctl addbr br0" >> $ifaces
+echo "pre-up brctl addif br0 eth0" >> $ifaces
+echo "post-down ifconfig wlan0 0.0.0.0 down" >> $ifaces
+echo "post-down ifconfig eth0 0.0.0.0 down" >> $ifaces
+echo "post-down brctl delif br0 eth0" >> $ifaces
 echo "post-down brctl delbr br0" >> /etc/network/interfaces
 
 
